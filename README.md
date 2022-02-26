@@ -18,7 +18,7 @@ This application will allow the user to post a photo, the category the photo bel
 
     1. set -o allexport
     2. source .env
-    3. ECHO $SECRET_KEY
+    3. echo $SECRET_KEY
 * Create the admin username by:
 
     * python3 manage.py createsuperuser
