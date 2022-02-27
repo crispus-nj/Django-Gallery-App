@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
 body {
     background-color: #1a1a1a !important;
 }
@@ -42,8 +45,10 @@ label {
  }
 
 .navbar-brand {
-    font-family: 'Great Vibes', cursive;
-    font-family: 'Merriweather', serif;
+    /* font-family: 'Great Vibes', cursive;
+    font-family: 'Merriweather', serif; */
+    font-size: 1.5rem;
+    font-family: 'Shadows Into Light', cursive;
 }
 
 li a:hover,
@@ -70,6 +75,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 }
+
 /* 
 * {
     display: none !important;

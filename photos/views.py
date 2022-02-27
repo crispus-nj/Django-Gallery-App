@@ -6,7 +6,11 @@ from django.db.models import Q
 def home(request):
     q = request.GET.get('q') if request.GET.get('q') != None else ''
     # t = request.GET.get('t') if request.GET.get('t') !=  None else ''
-    print(q)
+    # print(q)
+    image = Photo.filter_by_location(location = q)
+    print(image)
+    for image in image:
+        print("Erickooo",image)
     photos = Photo.objects.filter(Q(category__name__icontains = q) |
                                     Q(location__name__icontains = q)).order_by('-date_posted')
     category = Category.objects.all()
@@ -14,7 +18,7 @@ def home(request):
     return render(request, 'photos/index.html', context)
 
 def photo(request, pk):
-    photos = Photo.objects.get(id=pk)
+    photos = Photo.get_image_by_id(pk = pk)
     context = {'photos': photos}
     return render(request, 'photos/photo.html', context)
 

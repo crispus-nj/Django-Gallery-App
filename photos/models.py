@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils import timezone
 
 # Create your models here.
 class Location(models.Model):
@@ -20,6 +19,34 @@ class Photo(models.Model):
     image = models.ImageField()
     description = models.TextField()
     date_posted = models.DateTimeField(auto_now_add=True)
+
+    def save_image(self):
+        self.save()
+
+    def delete_image(self):
+        self.delete()
+
+    def update_image(self):
+        pass
+
+    @classmethod
+    def get_image_by_id(cls, pk):
+        image = Photo.objects.get(id = pk)
+
+        return image
+
+    @classmethod
+    def filter_by_location(cls, location):
+        image = Location.objects.filter(name = location)
+        # for image in image:
+        #     image = image.location
+        return image 
+
+    def filter_by_category(self):
+        pass
+    
+    def search_image(self):
+        pass
 
     def __str__(self):
         return self.description
