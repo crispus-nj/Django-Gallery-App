@@ -13,7 +13,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-class Photos(models.Model):
+class Photo(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     location = models.ForeignKey(Location, on_delete=models.SET_NULL, null=True)
     image = models.ImageField()
