@@ -12,11 +12,15 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Categories
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">all</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu" >
+                            <div class="card dropdown-menu" style="width: 18rem;" aria-labelledby="navbarDropdown">
+                                <ul class="list-group list-group-flush">
+                                  <a href=""><li class="list-group-item">All</li></a>
+                                  {% for category in category %}
+                                  <a href=""><li class="list-group-item">{{category.name}}</li></a>
+                                  {% endfor %}
+                                </ul>
+                              </div>
                         </ul>
                       </li>
                 </div>
