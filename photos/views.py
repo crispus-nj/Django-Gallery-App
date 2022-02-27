@@ -8,4 +8,6 @@ def home(request):
     return render(request, 'photos/index.html', context)
 
 def photo(request, pk):
-    return render(request, 'photos/photo.html')
+    photos = Photo.objects.get(id=pk)
+    context = {'photos': photos}
+    return render(request, 'photos/photo.html', context)

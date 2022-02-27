@@ -1,0 +1,11 @@
+.nav-section {
+    margin-left: 20rem;
+}
+.nav-section-1 {
+    margin-right: 20rem;
+}
+.photos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
