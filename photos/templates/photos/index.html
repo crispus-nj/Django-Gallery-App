@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="photos">
+<div class="photos mb-2">
     <div class="album">
-        <h3>Lattest Photos from the Album</h3>
+        <h3>LATTEST ALBUM</h3>
     </div>
     <div class="search-photo">
         <form class="d-flex">
@@ -10,6 +10,7 @@
         </form>
     </div>
 </div>
+<hr>
 
 {% for photo in photos %}
 <div class="col-md-4">
