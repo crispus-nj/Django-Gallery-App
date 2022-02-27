@@ -5,8 +5,8 @@ from .models import Photo, Category
 def home(request):
     q = request.GET.get('q') if request.GET.get('q') != None else ''
     print(q)
-    photos = Photo.objects.all()
-    category = Category.objects.filter(name__icontains = q)
+    photos = Photo.objects.filter(category__name__icontains = q)
+    category = Category.objects.all()
     context = {'photos': photos, 'category':category}
     return render(request, 'photos/index.html', context)
 
