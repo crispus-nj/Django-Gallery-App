@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Photo, Category
+from .models import Photo, Category, Location
 from django.db.models import Q
 # Create your views here.
 def home(request):
@@ -18,6 +18,7 @@ def photo(request, pk):
     return render(request, 'photos/photo.html', context)
 
 def add_photo(request):
+    location = Location.objects.all()
     category = Category.objects.all()
-    context = {'category':category}
+    context = {'category':category, 'location':location}
     return render(request, 'photos/add_photo.html', context)
