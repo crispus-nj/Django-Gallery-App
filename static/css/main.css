@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Merriweather&display=swap');
 body {
     background-color: #1a1a1a !important;
 }
@@ -5,10 +6,45 @@ body {
 h3, h5, h6 {
     color: #383838;
 }
-.latest {
+.latest,
+hr 
+{
     color: white;
 }
+.latest {
+    font-family: 'Dancing Script', cursive;
+font-family: 'Merriweather', serif;
+}
+label {
+    color: #1a1a1a;
+}
 
+.card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    /* height: 35rem; */
+    flex-wrap: wrap;
+    background-color: #eeeeee;
+}
+.form {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    background-color: #eeeeee;
+    padding: 1rem;
+    border-radius: 12px;
+}
+ button.disabled:hover {
+    cursor:not-allowed
+ }
+
+
+
+li a:hover,
+li a:active {
+    color: #7e0154;
+}
 
 .nav-section {
     margin-left: 20rem;
