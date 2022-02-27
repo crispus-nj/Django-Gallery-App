@@ -1,8 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="col-md-4">
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique obcaecati totam voluptas tempore, deserunt eius optio, hic assumenda earum quo distinctio doloremque necessitatibus id veniam temporibus deleniti dicta vel modi.
-    </p>
+<div class="photos">
+    <div class="album">
+        <h3>Lattest Photos from the Album</h3>
+    </div>
+    <div class="search-photo">
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search by location ... " aria-label="Search">
+        </form>
+    </div>
 </div>
+
+{% for photo in photos %}
+<div class="col-md-4">
+    <div class="card shadow mt-3">
+        <img src="{{photo.image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Category: {{photo.category.name}}</h5>
+            <h5 class="card-text">Location: {{photo.location.name}}</h5>
+            <a href="#" class="btn btn-primary">View</a>
+        </div>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}
