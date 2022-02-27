@@ -12,3 +12,8 @@ def photo(request, pk):
     photos = Photo.objects.get(id=pk)
     context = {'photos': photos}
     return render(request, 'photos/photo.html', context)
+
+def add_photo(request):
+    category = Category.objects.all()
+    context = {'category':category}
+    return render(request, 'photos/add_photo.html', context)
