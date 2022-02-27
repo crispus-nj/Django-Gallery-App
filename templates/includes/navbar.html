@@ -15,9 +15,9 @@
                         <ul class="dropdown-menu" >
                             <div class="card dropdown-menu" style="width: 18rem;" aria-labelledby="navbarDropdown">
                                 <ul class="list-group list-group-flush">
-                                  <a href=""><li class="list-group-item">All</li></a>
+                                  <a href="{% url 'home'%}"><li class="list-group-item">All</li></a>
                                   {% for category in category %}
-                                  <a href=""><li class="list-group-item">{{category.name}}</li></a>
+                                  <a href="{% url 'home'%}?q={{category.name}}"><li class="list-group-item">{{category.name}}</li></a>
                                   {% endfor %}
                                 </ul>
                               </div>

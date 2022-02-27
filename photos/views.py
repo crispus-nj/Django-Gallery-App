@@ -3,8 +3,10 @@ from .models import Photo, Category
 
 # Create your views here.
 def home(request):
+    q = request.GET.get('q') if request.GET.get('q') != None else ''
+    print(q)
     photos = Photo.objects.all()
-    category = Category.objects.all()
+    category = Category.objects.filter(name__icontains = q)
     context = {'photos': photos, 'category':category}
     return render(request, 'photos/index.html', context)
 
