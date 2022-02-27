@@ -6,6 +6,7 @@
             <img src="{{photos.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-text">Description: {{photos.description.name}}</h5>
+              <h6>Date Posted: <span class="text-muted">{{photos.date_posted | timesince}} ago</span> </h6>
             </div>
           </div>
     </div>

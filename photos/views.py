@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Photo, Category, Location
 from django.db.models import Q
+
 # Create your views here.
 def home(request):
     q = request.GET.get('q') if request.GET.get('q') != None else ''
@@ -20,5 +21,23 @@ def photo(request, pk):
 def add_photo(request):
     location = Location.objects.all()
     category = Category.objects.all()
+    if request.method == 'POST':
+        data = request.POST
+        image = request.FILES.get('image')
+        # print(data.get('location'))
+        # if data['category'] != 'none' and data['location'] != 'none':
+        #     category = Category.objects.get(id = data['category'])
+        #     location = Location.objects.get(id = data['location'])
+        # else:
+        #     category = None
+        #     location = None
+
+        photo = Photo.objects.create(
+            category = data.get('category'),
+            location = data.get('location'),
+            image = image,
+            description = data.get('description'),  
+        )
+        return redirect('home')
     context = {'category':category, 'location':location}
     return render(request, 'photos/add_photo.html', context)

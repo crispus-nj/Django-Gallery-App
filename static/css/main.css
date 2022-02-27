@@ -1,3 +1,15 @@
+body {
+    background-color: #1a1a1a !important;
+}
+
+h3, h5, h6 {
+    color: #383838;
+}
+.latest {
+    color: white;
+}
+
+
 .nav-section {
     margin-left: 20rem;
 }
@@ -12,3 +24,7 @@
 li a {
     text-decoration: none !important;
 }
+/* 
+* {
+    display: none !important;
+} */
