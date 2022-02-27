@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Merriweather&display=swap');
 body {
     background-color: #1a1a1a !important;
 }
@@ -12,7 +12,8 @@ hr
     color: white;
 }
 .latest {
-    font-family: 'Dancing Script', cursive;
+
+font-family: 'Caveat', cursive;
 font-family: 'Merriweather', serif;
 }
 label {
@@ -59,6 +60,11 @@ li a:active {
 }
 li a {
     text-decoration: none !important;
+}
+.card-section {
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 /* 
 * {

@@ -8,7 +8,7 @@ def home(request):
     # t = request.GET.get('t') if request.GET.get('t') !=  None else ''
     print(q)
     photos = Photo.objects.filter(Q(category__name__icontains = q) |
-                                    Q(location__name__icontains = q))
+                                    Q(location__name__icontains = q)).order_by('-date_posted')
     category = Category.objects.all()
     context = {'photos': photos, 'category':category}
     return render(request, 'photos/index.html', context)
@@ -32,12 +32,12 @@ def add_photo(request):
         #     category = None
         #     location = None
 
-        photo = Photo.objects.create(
-            category = data.get('category'),
-            location = data.get('location'),
-            image = image,
-            description = data.get('description'),  
-        )
+        # photo = Photo.objects.create(
+        #     category = data.get('category'),
+        #     location = data.get('location'),
+        #     image = image,
+        #     description = data.get('description'),  
+        # )
         return redirect('home')
     context = {'category':category, 'location':location}
     return render(request, 'photos/add_photo.html', context)

@@ -6,7 +6,8 @@
     </div>
     <div class="search-photo">
         <form class="d-flex">
-            <input class="form-control me-2" name="q" type="search" placeholder="Search by location ... " aria-label="Search">
+            <input class="form-control me-2" name="q" type="search" placeholder="Search by location ... "
+                aria-label="Search">
         </form>
     </div>
 </div>
@@ -19,13 +20,22 @@
         <div class="card-body">
             <h5 class="card-title">Category: {{photo.category.name}}</h5>
             <h5 class="card-text">Location: {{photo.location.name}}</h5>
-            <a href="{% url 'photo' photo.id%}" class="btn btn-primary">View</a>
-            <small class="text-muted">Date Posted: {{photo.date_posted | timesince}}</small>
-
-            <!-- Button trigger modal -->
-            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{photo.id}}" href="{%url 'photo' photo.id%}">
+            <div class="card-section">
+                <div class="section">
+                    <a href="{% url 'photo' photo.id%}" class="btn btn-primary btn-sm">View</a>
+                    <!-- Button trigger modal -->
+                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{photo.id}}" href="{%url 'photo' photo.id%}">
                 View
             </button> -->
+                </div>
+                <div class="section-1">
+                    <small class="text-muted">Date Posted: {{photo.date_posted | timesince}}</small>
+
+                </div>
+            </div>
+
+
+
 
             <!-- Modal -->
             <div class="modal fade" id="{{photo.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
