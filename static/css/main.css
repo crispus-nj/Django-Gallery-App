@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather&display=swap');
 body {
     background-color: #1a1a1a !important;
 }
@@ -40,7 +41,10 @@ label {
     cursor:not-allowed
  }
 
-
+.navbar-brand {
+    font-family: 'Great Vibes', cursive;
+    font-family: 'Merriweather', serif;
+}
 
 li a:hover,
 li a:active {
