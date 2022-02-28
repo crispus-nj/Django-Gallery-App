@@ -1,87 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Merriweather&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
 
 body {
-    background-color: #1a1a1a !important;
+  background-color: #1a1a1a !important;
 }
 
-h3, h5, h6 {
-    color: #383838;
-    font-family: 'Playfair Display', serif;
+h3,
+h5,
+h6 {
+  color: #383838;
+  font-family: "Playfair Display", serif;
 }
 .latest,
-hr 
-{
-    color: white;
+hr {
+  color: white;
 }
 .latest {
-
-font-family: 'Caveat', cursive;
-font-family: 'Merriweather', serif;
-    font-style: italic;
-
+  font-family: "Caveat", cursive;
+  font-family: "Merriweather", serif;
+  font-style: italic;
 }
 label {
-    color: #1a1a1a;
+  color: #1a1a1a;
 }
 strong {
-    font-family: 'Caveat', cursive;
-font-family: 'Merriweather', serif;
+  font-family: "Caveat", cursive;
+  font-family: "Merriweather", serif;
 }
 
 .card {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    padding: 1rem;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    /* height: 35rem; */
-    flex-wrap: wrap;
-    background-color: #eeeeee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  /* height: 35rem; */
+  flex-wrap: wrap;
+  background-color: #eeeeee;
 }
 .form {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    background-color: #eeeeee;
-    padding: 1rem;
-    border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  background-color: #eeeeee;
+  padding: 1rem;
+  border-radius: 12px;
 }
- button.disabled:hover {
-    cursor:not-allowed
- }
+.collapse {
+    font-family: "Shadows Into Light", cursive !important;
+}
+button.disabled:hover {
+  cursor: not-allowed;
+}
 
 .navbar-brand {
-    /* font-family: 'Great Vibes', cursive;
+  /* font-family: 'Great Vibes', cursive;
     font-family: 'Merriweather', serif; */
-    font-size: 1.5rem;
-    font-family: 'Shadows Into Light', cursive;
-    font-style: italic;
+  font-size: 1.5rem;
+  font-family: "Shadows Into Light", cursive;
+  font-style: italic;
 }
 
 li a:hover,
 li a:active {
-    color: #7e0154;
+  color: #7e0154;
 }
 
 .nav-section {
-    margin-left: 20rem;
+  margin-left: 20rem;
 }
 .nav-section-1 {
-    margin-right: 20rem;
+  margin-right: 20rem;
 }
 .photos {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
 }
 li a {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 .card-section {
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* 
