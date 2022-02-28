@@ -17,10 +17,10 @@ def home(request):
     context = {'photos': photos, 'category':category}
     return render(request, 'photos/index.html', context)
 
-# def photo(request, pk):
-#     photos = Photo.get_image_by_id(pk = pk)
-#     context = {'photos': photos}
-#     return render(request, 'photos/photo.html', context)
+def photo(request, pk):
+    photos = Photo.get_image_by_id(pk = pk)
+    context = {'photos': photos}
+    return render(request, 'photos/photo.html', context)
 
 def add_photo(request):
     location = Location.objects.all()

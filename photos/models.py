@@ -32,7 +32,6 @@ class Photo(models.Model):
     @classmethod
     def get_image_by_id(cls, pk):
         image = Photo.objects.get(id = pk)
-
         return image
 
     @classmethod
