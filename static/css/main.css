@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 
 body {
     background-color: #1a1a1a !important;
@@ -9,6 +9,7 @@ body {
 
 h3, h5, h6 {
     color: #383838;
+    font-family: 'Playfair Display', serif;
 }
 .latest,
 hr 
@@ -19,9 +20,15 @@ hr
 
 font-family: 'Caveat', cursive;
 font-family: 'Merriweather', serif;
+    font-style: italic;
+
 }
 label {
     color: #1a1a1a;
+}
+strong {
+    font-family: 'Caveat', cursive;
+font-family: 'Merriweather', serif;
 }
 
 .card {
@@ -49,6 +56,7 @@ label {
     font-family: 'Merriweather', serif; */
     font-size: 1.5rem;
     font-family: 'Shadows Into Light', cursive;
+    font-style: italic;
 }
 
 li a:hover,

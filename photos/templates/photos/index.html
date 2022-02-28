@@ -18,15 +18,16 @@
     <div class="card shadow mt-4">
         <img src="{{photo.image.url}}" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Category: {{photo.category.name}}</h5>
-            <h5 class="card-text">Location: {{photo.location.name}}</h5>
+            <h5 class="card-title"><strong>Category:</strong> {{photo.category.name}}</h5>
+            <h5 class="card-text"><strong>Location:</strong> {{photo.location.name}}</h5>
             <div class="card-section">
                 <div class="section">
-                    <a href="{% url 'photo' photo.id%}" class="btn btn-primary btn-sm">View</a>
+                    <!-- <a href="{% url 'photo' photo.id%}" class="btn btn-primary btn-sm">View</a> -->
                     <!-- Button trigger modal -->
-                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{photo.id}}" href="{%url 'photo' photo.id%}">
-                View
-            </button> -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#imageModal{{photo.id}}" href="{%url 'photo' photo.id%}">
+                        View
+                    </button>
                 </div>
                 <div class="section-1">
                     <small class="text-muted">Posted: {{photo.date_posted | timesince}}</small>
@@ -38,7 +39,7 @@
 
 
             <!-- Modal -->
-            <div class="modal fade" id="{{photo.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="imageModal{{photo.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -47,7 +48,19 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            {{photo.category_set.name}}
+                            <img src="{{photo.image.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="card-section">
+                                    <div class="section mb-2">
+                                        <h5 class="card-title"><strong>Category:</strong> {{photo.category.name}}</h5>
+                                        </div>
+                                        <div class="section-1 mb-2">
+                                            <h5 class="card-text"><strong>Location:</strong> {{photo.location.name}}</h5>
+                                        </div>
+                                    </div>
+                                <h5 class="card-text"><strong>Description:</strong> {{photo.description}}</h5>
+                                <small style="float: right;"><strong>Posted:</strong> <span  class="text-muted">{{photo.date_posted | timesince}}</span></small>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
