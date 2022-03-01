@@ -50,7 +50,7 @@ class Photo(models.Model):
         self.save()
 
     def delete_image(self):
-        self.delete
+        self.delete()
 
     def update_image(self):
         pass
