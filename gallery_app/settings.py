@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 import django_heroku
+import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -89,6 +90,10 @@ DATABASES = {
            'PASSWORD': os.environ.get('DB_PASSWORD'),
     }
 }
+
+if 'test' in sys.argv or 'test\_coverage' in sys.argv: #Covers regular testing and django-coverage
+ DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql'
+ DATABASES['default']['NAME'] = ':memory:'
 
 
 # Password validation

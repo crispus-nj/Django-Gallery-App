@@ -4,11 +4,37 @@ from django.db import models
 class Location(models.Model):
     name = models.CharField(max_length=100)
 
+    @classmethod
+    def filter_by_location(cls, location):
+        '''
+        filter_by_location for filtering all the photos with the same location
+        '''
+        location = '';
+        locate = Location.objects.filter(name = location)
+        print("Location", locate)
+        # return locate
+        for loca in locate:
+            location = loca
+        return location
+
     def __str__(self):
         return self.name
 
 class Category(models.Model):
     name = models.CharField(max_length=200)
+
+    @classmethod
+    def filter_by_category(cls, category):
+        '''
+        filter_by_category for filtering all the photos with the same category
+        '''
+        catg = '';
+        catego = Category.objects.filter(name = category)
+        print("category",catego)
+        for cate in catego:
+            catg = cate
+        return catg
+
 
     def __str__(self):
         return self.name
@@ -41,8 +67,6 @@ class Photo(models.Model):
         #     image = image.location
         return image 
 
-    def filter_by_category(self):
-        pass
     
     def search_image(self):
         pass
