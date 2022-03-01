@@ -28,8 +28,13 @@ class PhotoTestClass(TestCase):
         self.location = Location.objects.create(name = 'Thika')
         self.crispus = Photo(category = self.category, location = self.location, image ='test.jpg', description="Nice pet")
         
+
+    def test_save(self):
+        self.crispus.save()
+        photos = Photo.objects.all()
+        self.assertTrue(len(photos) > 0)
+        
     # Testing  instance
     def test_instance(self):
-        
         self.assertTrue(isinstance(self.crispus, Photo))
 
